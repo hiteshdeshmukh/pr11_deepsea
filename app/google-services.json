@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "414320372365",
+    "project_id": "pr11-deepsea",
+    "storage_bucket": "pr11-deepsea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414320372365:android:63569796507635815ed0c4",
+        "android_client_info": {
+          "package_name": "com.example.pr11_deepsea"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmAn8kqwzEEfGASrmXl_3taUg8etYnyus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
