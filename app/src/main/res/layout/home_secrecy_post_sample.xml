@@ -27,7 +27,7 @@
             android:orientation="horizontal">
 
             <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/homeProfileImage0"
+                android:id="@+id/postProfileImage1"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:scaleType="centerCrop"
@@ -43,20 +43,21 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/homeProfileName0"
+                    android:id="@+id/postUsername1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:gravity="center_vertical"
-                    android:text="Hitesh Deshmukh"
+                    android:text="Username"
                     style="@style/TextColor"
                     android:textSize="14dp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/postTime1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Location"
+                    android:text="Time"
                     android:textSize="12dp"
                     android:layout_marginStart="10dp"/>
 
@@ -77,22 +78,34 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/homePostCaption0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Caption"
+            android:visibility="gone"
+            style="@style/TextColor"/>
+
+
         <ImageView
-            android:id="@+id/homePost0"
+            android:id="@+id/PostImage1"
             android:layout_width="match_parent"
             android:layout_height="400dp"
             android:src="@drawable/h9" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="25dp"
             android:gravity="center_vertical">
 
             <ImageView
                 android:id="@+id/homePostLike0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 style="@style/IconBackground"
                 android:src="@drawable/baseline_heart_like_half" />
 
@@ -100,7 +113,8 @@
                 android:id="@+id/homePostComment0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_toEndOf="@+id/homePostLike0"
                 style="@style/IconBackground"
                 android:src="@drawable/baseline_chat_bubble_outline_24" />
@@ -110,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
                 android:layout_toEndOf="@+id/homePostComment0"
                 style="@style/IconBackground"
                 android:src="@drawable/baseline_arrow_outward_24" />
@@ -121,21 +135,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 style="@style/IconBackground"
                 android:src="@drawable/baseline_bookmark_save_24" />
 
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/homePostCaption0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:text="Caption"
-            android:visibility="gone"
-            style="@style/TextColor"/>
+
 
     </LinearLayout>
 

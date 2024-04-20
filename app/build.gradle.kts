@@ -56,4 +56,10 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
 
     implementation("com.google.android.gms:play-services-auth:21.1.0")
+
+    implementation("com.google.firebase:firebase-storage")
+
+    implementation("com.squareup.picasso:picasso:2.8")
+
+    implementation("com.github.marlonlom:timeago:4.0.3")
 }

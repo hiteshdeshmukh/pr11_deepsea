@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/round_corner_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Comment"
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/gray"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentRecycler1"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:padding="2dp"
+        android:layout_gravity="bottom">
+
+        <EditText
+            android:id="@+id/commentText1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Comment Here.."
+            android:padding="4dp"
+            android:paddingStart="10dp"
+            android:background="@drawable/edittext_border"/>
+
+        <ImageButton
+            android:id="@+id/commentSendButton1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            style="@style/IconBackground"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="1dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_send_24"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
