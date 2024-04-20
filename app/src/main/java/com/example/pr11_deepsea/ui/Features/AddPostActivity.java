@@ -116,30 +116,55 @@ public class AddPostActivity extends AppCompatActivity {
                 final StorageReference reference = storage.getReference().child("posts")
                         .child(FirebaseAuth.getInstance().getUid())
                         .child(new Date().getTime()+"");
-                reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                PostModel post = new PostModel();
-                                post.setPostImage(uri.toString());
-                                post.setPostedBy(FirebaseAuth.getInstance().getUid());
-                                post.setPostDescription(binding.addPost1.getText().toString());
-                                post.setPostedAt(String.valueOf(new Date().getTime()));
 
-                                database.getReference().child("posts")
-                                        .push()
-                                        .setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                            @Override
-                                            public void onSuccess(Void unused) {
-                                                Toast.makeText(AddPostActivity.this,"Posted Successfully",Toast.LENGTH_SHORT).show();
-                                            }
-                                        });
-                            }
-                        });
-                    }
-                });
+                if (uri == null){
+
+                    PostModel postModel = new PostModel();
+                    postModel.setPostedAt(String.valueOf(new Date().getTime()));
+                    postModel.setPostedBy(auth.getUid());
+                    postModel.setPostDescription(binding.addPost1.getText().toString());
+
+
+                  //  database.getReference().child("TextPost").child(auth.getUid());
+
+                    database.getReference().child("posts")
+                            .push()
+                            .setValue(postModel).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Toast.makeText(AddPostActivity.this,"Posted Successfully",Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+
+                }else {
+                    reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    PostModel post = new PostModel();
+                                    post.setPostImage(uri.toString());
+                                    post.setPostedBy(FirebaseAuth.getInstance().getUid());
+                                    post.setPostDescription(binding.addPost1.getText().toString());
+                                    post.setPostedAt(String.valueOf(new Date().getTime()));
+
+                                    database.getReference().child("posts")
+                                            .push()
+                                            .setValue(post).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void unused) {
+                                                    Toast.makeText(AddPostActivity.this,"Posted Successfully",Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
+                                }
+                            });
+                        }
+                    });
+
+                }
+
             }
         });
     }

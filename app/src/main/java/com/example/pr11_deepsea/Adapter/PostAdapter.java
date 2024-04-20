@@ -22,6 +22,7 @@ import com.example.pr11_deepsea.Model.PostModel;
 import com.example.pr11_deepsea.Model.UserModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.HomeSecrecyPostSampleBinding;
+import com.github.marlonlom.utilities.timeago.TimeAgo;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -30,6 +31,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -53,10 +55,23 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
         PostModel postModel = postModelArrayList.get(position);
-        Picasso.get()
-                .load(postModel.getPostImage())
-                .placeholder(R.drawable.baseline_person_outline_24)
-                .into(holder.binding.PostImage1);
+
+        String postImage = postModel.getPostImage();
+        if (postImage == null){
+            holder.binding.PostImage1.setVisibility(View.GONE);
+        }else {
+            Picasso.get()
+                    .load(postModel.getPostImage())
+                    .placeholder(R.drawable.baseline_person_outline_24)
+                    .into(holder.binding.PostImage1);
+        }
+
+
+
+
+        holder.binding.postTime1.setText(postModel.getPostedAt()+"");
+       // String postTime = TimeAgo.using(postModel.getPostedAt());
+      //  holder.binding.postTime1.setText(postTime);
 
         String description = postModel.getPostDescription();
         if (description.equals("")){
@@ -105,7 +120,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
 
                             }
                         });
-
 
                 commentSendButton.setOnClickListener(new View.OnClickListener() {
                     @Override
