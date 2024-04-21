@@ -70,8 +70,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
 
 
         holder.binding.postTime1.setText(postModel.getPostedAt()+"");
-       // String postTime = TimeAgo.using(postModel.getPostedAt());
-      //  holder.binding.postTime1.setText(postTime);
+
+        long eMilli = Long.parseLong(postModel.getPostedAt());
+        String postTime = TimeAgo.using(eMilli);
+        holder.binding.postTime1.setText(postTime);
 
         String description = postModel.getPostDescription();
         if (description.equals("")){

@@ -44,6 +44,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.viewHold
         CommentModel commentModel = commentModelArrayList.get(position);
         holder.binding.commentSampleText1.setText(commentModel.getCommentBody());
         holder.binding.commentSampleTime1.setText(commentModel.getCommentedAt()+"");
+
         String commentTime = TimeAgo.using(commentModel.getCommentedAt());
         holder.binding.commentSampleTime1.setText(commentTime);
 
