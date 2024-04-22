@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.pr11_deepsea.ui.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_test"
         tools:layout="@layout/fragment_home" />
 
     <fragment

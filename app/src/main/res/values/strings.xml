@@ -20,6 +20,51 @@
     <string name="empty">strings/</string>
     <string name="title_activity">Activity</string>
     <string name="title_appointment">Appointment</string>
+    <string name="title_test">Tests</string>
+
+
+
+    <string name="take_test">Take Test</string>
+    <string name="anxiety">Anxiety</string>
+    <string name="depression">Depression</string>
+    <string name="autism">Autism</string>
+    <string name="suicidality">Suicidality</string>
+    <string name="eating_disorder">Eating Disorder</string>
+    <string name="dissociation">Dissociation</string>
+    <string name="adhd">ADHD</string>
+    <string name="testSleep">Sleep</string>
+    <string name="not_at_all">Not at all</string>
+    <string name="several_days">Several days</string>
+    <string name="more_than_half_the_days">More than half the days</string>
+    <string name="nearly_everyday">Nearly everyday</string>
+    <string name="_2_not_being_able_to_stop_or_control_worrying">2. Not being able to stop or control worrying</string>
+    <string name="_1_feeling_nervous_anxious_or_on_edge">1. Feeling nervous, anxious, or on edge</string>
+    <string name="anxiety_test">Anxiety test</string>
+    <string name="_3_worrying_too_much_about_different_things">3. Worrying too much about different things</string>
+    <string name="_4_trouble_relaxing">4. Trouble relaxing</string>
+    <string name="submit">Submit</string>
+    <string name="_1_little_interest_or_pleasure_in_doing_things">1. Little interest or pleasure in doing things</string>
+    <string name="_2_feeling_down_depressed_or_hopeless">2. Feeling down, depressed, or hopeless</string>
+    <string name="_3_trouble_falling_or_staying_asleep_or_sleeping_too_much">3. Trouble falling or staying asleep, or sleeping too much</string>
+    <string name="_4_feeling_tired_or_having_little_energy">4. Feeling tired or having little energy</string>
+    <string name="_5_poor_appetite_or_overeating">5. Poor appetite or overeating</string>
+    <string name="_6_feeling_bad_about_yourself_or_that_you_are_a_failure_or_have_let_yourself_or_your_family_down">6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</string>
+    <string name="_7_trouble_concentrating_on_things_such_as_reading_the_newspaper_or_watching_television">7. Trouble concentrating on things, such as reading the newspaper or watching television</string>
+    <string name="_8_moving_or_speaking_so_slowly_that_other_people_could_have_noticed_or_the_opposite_being_so_fidgety_or_restless_that_you_have_been_moving_around_a_lot_more_than_usual">8. Moving or speaking so slowly that other people could have noticed Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual</string>
+    <string name="_9_thoughts_that_you_would_be_better_off_dead_or_of_hurting_yourself">9. Thoughts that you would be better off dead, or of hurting yourself</string>
+    <string name="_10_if_you_checked_off_any_problems_how_difficult_have_these_problems_made_it_for_you_at_work_home_or_with_other_people">10. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?</string>
+    <string name="_5_being_so_restless_that_it_is_hard_to_sit_still">5. Being so restless that it is hard to sit still</string>
+    <string name="_6_becoming_easily_annoyed_or_irritable">6. Becoming easily annoyed or irritable</string>
+    <string name="_7_feeling_afraid_as_if_something_awful_might_happen">7. Feeling afraid, as if something awful might happen</string>
+    <string name="autism_test">Autism Test</string>
+    <string name="_1_i_like_to_do_things_the_same_way">1. I like to do things the same way</string>
+    <string name="_2_i_would_rather_hang_out_alone_rather_than_go_to_a_party_with_friends">2. I would rather hang out alone rather than go to a party with friends</string>
+    <string name="_3_i_tend_to_notice_small_details_that_others_don_t">3. I tend to notice small details that others don’t</string>
+    <string name="_4_i_find_myself_drawn_more_strongly_to_people_than_to_things_or_solitary_activities_including_video_games">4. I find myself drawn more strongly to people than to things or solitary activities (including video games)</string>
+    <string name="_5_i_enjoy_social_gatherings_and_or_find_social_situations_easy">5. I enjoy social gatherings and/or find social situations easy</string>
+    <string name="personality">Personality</string>
+    <string name="disorder">Disorder</string>
+    <string name="personality_disorder_test">Personality Disorder Test</string>
 
 
 </resources>
