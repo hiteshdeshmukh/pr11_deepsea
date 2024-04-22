@@ -8,4 +8,18 @@
     <string name="title_secrecy">Secrecy</string>
     <string name="title_profile">Profile</string>
     <string name="default_web_client_id">414320372365-7gdugqp55opjd92b6on96nfp0ts877v0.apps.googleusercontent.com</string>
+
+
+    <string name="extercise">Regular physical activity can boost mood and reduce stress.</string>
+    <string name="meditation">Practices like meditation and mindfulness can help calm the mind and promote relaxation. </string>
+    <string name="naturetime">Being outdoors, whether it is a walk in the park or a hike in the mountains, can have a positive impact on mental well-being.</string>
+    <string name="creativity">Engaging in creative activities like painting, writing, or playing music can be therapeutic and provide a sense of accomplishment. </string>
+    <string name="socializing0">Engaging in creative activities like painting, writing, or playing music can be therapeutic and provide a sense of accomplishment. </string>
+    <string name="eating"> A balanced diet rich in fruits, vegetables, and whole grains can support overall well-being. </string>
+    <string name="sleep">Prioritize good sleep hygiene to ensure adequate rest, as lack of sleep can negatively affect mental health. </string>
+    <string name="empty">strings/</string>
+    <string name="title_activity">Activity</string>
+    <string name="title_appointment">Appointment</string>
+
+
 </resources>

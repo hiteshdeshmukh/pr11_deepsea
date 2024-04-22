@@ -19,7 +19,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/dashboardHeading1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Exercise"
@@ -34,7 +34,7 @@
                 android:background="#C7E6F4">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/dashboardInfo1"
                     android:layout_width="230dp"
                     android:layout_margin="10dp"
                     android:textSize="20sp"
@@ -44,7 +44,7 @@
                     android:text="@string/extercise" />
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/dashboardImage1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:scaleType="fitCenter"
