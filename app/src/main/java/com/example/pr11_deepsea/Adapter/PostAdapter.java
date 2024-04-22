@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -29,6 +30,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.squareup.picasso.Picasso;
 
 import java.sql.Time;
@@ -82,6 +84,43 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
             holder.binding.homePostCaption0.setText(postModel.getPostDescription());
             holder.binding.homePostCaption0.setVisibility(View.VISIBLE);
         }
+
+
+        // Menu in post to delete post
+        holder.binding.postMenu1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Dialog dialog = new Dialog(v.getContext());
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.post_menu_1);
+
+                Button postMenuDeleteButton = dialog.findViewById(R.id.postMenuDeleteButton1);
+
+                postMenuDeleteButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (postModel.getPostedBy().equals(FirebaseAuth.getInstance().getUid()) ){
+
+                           // FirebaseStorage.getInstance().getReference().child("posts").child(FirebaseAuth.getInstance().getUid()).delete(postModel.getPostedAt());
+                         //   FirebaseStorage.getInstance().getReference().child("posts").
+
+                            Toast.makeText(context,"Can be deleted", Toast.LENGTH_SHORT).show();
+
+
+                        }else {
+                            Toast.makeText(context,"Can not delete others post", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+                dialog.show();
+                dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation1;
+                dialog.getWindow().setGravity(Gravity.BOTTOM);
+            }
+        });
 
 
         holder.binding.homePostComment0.setOnClickListener(new View.OnClickListener() {

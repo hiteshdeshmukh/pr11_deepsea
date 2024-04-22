@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/round_corner_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Post Menu"
+        android:background="@android:color/transparent"
+        android:minHeight="?attr/actionBarSize" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:drawableLeft="@drawable/baseline_star_outline_24"
+        style="@style/ButtonBackground3"
+        android:text="Add to favoutes"
+        android:gravity="start|center_vertical"
+        />
+
+    <Button
+        android:id="@+id/postMenuDeleteButton1"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:drawableLeft="@drawable/baseline_delete_outline_24"
+        style="@style/ButtonBackground3"
+        android:text="Delete"
+        android:gravity="start|center_vertical"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:drawableLeft="@drawable/baseline_report_gmailerrorred_24"
+        style="@style/ButtonBackground3"
+        android:text="Report"
+        android:gravity="start|center_vertical"
+        />+
+
+
+
+</LinearLayout>
