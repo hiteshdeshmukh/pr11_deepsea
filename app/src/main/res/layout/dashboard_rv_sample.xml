@@ -23,9 +23,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Exercise"
+               style="@style/TextColor"
                 android:textStyle="bold"
-                android:textColor="#1A224C"
-                android:textSize="23sp"/>
+                android:textSize="20sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
