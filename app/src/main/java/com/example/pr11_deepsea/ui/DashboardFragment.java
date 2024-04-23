@@ -29,10 +29,10 @@ public class DashboardFragment extends Fragment {
 
         ArrayList<DashboardModel> dashboardModelArrayList = new ArrayList<>();
         dashboardModelArrayList.add(new DashboardModel(R.drawable.yoga,"Exercise",getString(R.string.extercise)));
-        //dashboardModelArrayList.add(new DashboardModel(R.drawable.meditation,"Meditation and Mindfulness",getString(R.string.meditation)));
-        //dashboardModelArrayList.add(new DashboardModel(R.drawable.nature,"Spending time in nature",getString(R.string.naturetime)));
+        dashboardModelArrayList.add(new DashboardModel(R.drawable.meditation,"Meditation and Mindfulness",getString(R.string.meditation)));
+        dashboardModelArrayList.add(new DashboardModel(R.drawable.nature,"Spending time in nature",getString(R.string.naturetime)));
         dashboardModelArrayList.add(new DashboardModel(R.drawable.creative_process,"Creative outlets",getString(R.string.creativity)));
-        //dashboardModelArrayList.add(new DashboardModel(R.drawable.social,"Socializing",getString(R.string.socializing0)));
+        dashboardModelArrayList.add(new DashboardModel(R.drawable.social,"Socializing",getString(R.string.socializing0)));
         dashboardModelArrayList.add(new DashboardModel(R.drawable.healthyfood1,"Healthy eating",getString(R.string.eating)));
         dashboardModelArrayList.add(new DashboardModel(R.drawable.sleep,"Quality sleep",getString(R.string.sleep)));
 

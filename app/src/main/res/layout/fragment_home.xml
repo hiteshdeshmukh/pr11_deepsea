@@ -9,7 +9,6 @@
 
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -21,213 +20,201 @@
                 style="@style/TextColor"
                 />
 
-           <!-- <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar2"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/testScreen1Recycler1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center">
+                />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10sp"
-                    android:text="@string/take_test"
-                    android:textAlignment="center"
-                    style="@style/TextColor"
-                    android:textSize="26sp"
-                    android:textStyle="bold" />
+<!--            <GridLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_margin="10sp"-->
+<!--                android:columnCount="2"-->
+<!--                android:rowCount="4">-->
 
-            </androidx.appcompat.widget.Toolbar>-->
+<!--                <androidx.cardview.widget.CardView-->
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10sp"
-                android:columnCount="2"
-                android:rowCount="4">
+<!--                    android:id="@+id/testScreenTestAnxiety1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:background="@drawable/round_corner_background"-->
+<!--                   >-->
 
-                <androidx.cardview.widget.CardView
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="@string/anxiety"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_anxiety" />-->
 
-                    android:id="@+id/testScreenTestAnxiety1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_columnWeight="1"
-                    android:background="@drawable/round_corner_background"
-                   >
+<!--                </androidx.cardview.widget.CardView>-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/anxiety"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_anxiety" />
+<!--                <androidx.cardview.widget.CardView-->
 
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-
-                    android:id="@+id/testScreenTestDepression1"
-                    android:layout_gravity="fill"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_margin="10dp"
-                    android:layout_columnWeight="1"
-                    android:background="@drawable/round_corner_background">
+<!--                    android:id="@+id/testScreenTestDepression1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:background="@drawable/round_corner_background">-->
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/depression"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_depression" />
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="@string/depression"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_depression" />-->
 
-                </androidx.cardview.widget.CardView>
+<!--                </androidx.cardview.widget.CardView>-->
 
 
 
-                <androidx.cardview.widget.CardView
+<!--                <androidx.cardview.widget.CardView-->
 
-                    android:id="@+id/txtautism"
-                    android:layout_gravity="fill"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/round_corner_background">
+<!--                    android:id="@+id/testScreenTestPersonalityDisorder1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:background="@drawable/round_corner_background">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="Personality\nDisorder"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_personality" />
-
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-
-                    android:id="@+id/txtsucidality"
-                    android:layout_gravity="fill"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/round_corner_background">
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="Personality\nDisorder"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_personality" />-->
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/suicidality"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_suicide" />
+<!--                </androidx.cardview.widget.CardView>-->
 
-                </androidx.cardview.widget.CardView>
+<!--                <androidx.cardview.widget.CardView-->
 
+<!--                    android:id="@+id/testScreenTestSuicidality1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:background="@drawable/round_corner_background">-->
 
 
-                <androidx.cardview.widget.CardView
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="@string/suicidality"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_suicide" />-->
 
-                    android:id="@+id/txteatingdisorder"
-                    android:layout_gravity="fill"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/round_corner_background">
+<!--                </androidx.cardview.widget.CardView>-->
 
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/eating_disorder"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_eatingdisorder" />
+<!--                <androidx.cardview.widget.CardView-->
 
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-
-                    android:id="@+id/txtdissociation"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/round_corner_background">
+<!--                    android:id="@+id/testScreenTestEatingDisorder1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:background="@drawable/round_corner_background">-->
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/dissociation"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_dissociation" />
 
-                </androidx.cardview.widget.CardView>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="@string/eating_disorder"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_eatingdisorder" />-->
 
-                <androidx.cardview.widget.CardView
+<!--                </androidx.cardview.widget.CardView>-->
 
-                    android:id="@+id/txtadhd"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/round_corner_background">
+<!--                <androidx.cardview.widget.CardView-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/adhd"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_adhd" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-
-                    android:id="@+id/txtsleep"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/round_corner_background">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="@string/testSleep"
-                            android:textAlignment="center"
-                            android:textColor="@color/black"
-                            android:textSize="20sp"
-                            app:drawableTopCompat="@drawable/test_sleep" />
+<!--                    android:id="@+id/testScreenTestDissociation1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:background="@drawable/round_corner_background">-->
 
 
-                </androidx.cardview.widget.CardView>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="@string/dissociation"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_dissociation" />-->
 
-            </GridLayout>
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+
+<!--                    android:id="@+id/testScreenTestAdhd1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:background="@drawable/round_corner_background">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="@string/adhd"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_adhd" />-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+
+<!--                    android:id="@+id/testScreenTestSleep1"-->
+<!--                    android:layout_gravity="fill"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:background="@drawable/round_corner_background">-->
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="@string/testSleep"-->
+<!--                            android:textAlignment="center"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:textSize="20sp"-->
+<!--                            app:drawableTopCompat="@drawable/test_sleep" />-->
+
+
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--            </GridLayout>-->
         </LinearLayout>
 
 </ScrollView>
