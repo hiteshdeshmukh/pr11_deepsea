@@ -12,13 +12,13 @@
 
             <Toolbar
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#094D83">
+                android:layout_height="wrap_content"
+                android:background="@color/gray">
 
                 <TextView
                     android:id="@+id/testSampleTitle1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="@string/AnxietyQuestionTitle"
                     android:layout_margin="20sp"
                     android:textSize="26sp"

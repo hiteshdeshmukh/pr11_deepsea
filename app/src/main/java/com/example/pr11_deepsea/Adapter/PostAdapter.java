@@ -28,9 +28,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 import java.sql.Time;
@@ -56,8 +58,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
-        PostModel postModel = postModelArrayList.get(position);
+        PostModel postModel = postModelArrayList.get(postModelArrayList.size()-1-position);
 
+        //PostModel lastPostModel = postModelArrayList.get(postModelArrayList.size()-1)
         String postImage = postModel.getPostImage();
         if (postImage == null){
             holder.binding.PostImage1.setVisibility(View.GONE);
@@ -107,6 +110,31 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
 
                             Toast.makeText(context,"Can be deleted", Toast.LENGTH_SHORT).show();
 
+                            DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+//                            StorageReference storageReference = FirebaseStorage.getInstance().getReference()
+//                                    .child("posts").child(FirebaseAuth.getInstance().getUid())
+//                                    .child(postModel.getPostedAt());
+
+
+
+                            if ( postModel.getPostImage() != null){
+                                //delete from storage first
+                                // then realtime database
+                                StorageReference storageReference = FirebaseStorage.getInstance().getReferenceFromUrl(postImage);
+                                storageReference.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        databaseReference.child("posts").child(postModel.getPostId()).removeValue();
+                                        Toast.makeText(v.getContext(), "Post Deleted", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                });
+
+                            }
+                            else{
+                                // delete from realtime database only
+                                databaseReference.child("posts").child(postModel.getPostId()).removeValue();
+                            }
 
                         }else {
                             Toast.makeText(context,"Can not delete others post", Toast.LENGTH_SHORT).show();
@@ -121,7 +149,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
                 dialog.getWindow().setGravity(Gravity.BOTTOM);
             }
         });
-
 
         holder.binding.homePostComment0.setOnClickListener(new View.OnClickListener() {
             @Override

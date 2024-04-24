@@ -67,7 +67,9 @@ public class SecrecyFragment extends Fragment {
                 postModelArrayList.clear();
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
                     PostModel post = dataSnapshot.getValue(PostModel.class);
-                    post.setPostId(dataSnapshot.getKey());
+                    if (post != null) {
+                        post.setPostId(dataSnapshot.getKey());
+                    }
                     postModelArrayList.add(post);
                 }
                 postAdapter.notifyDataSetChanged();
