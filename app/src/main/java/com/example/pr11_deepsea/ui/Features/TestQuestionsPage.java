@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.pr11_deepsea.Adapter.TestQuestionsScreenAdapter;
 import com.example.pr11_deepsea.Model.TestQuestionsScreenModel;
+import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.ActivityTestQuestionsPageBinding;
 
 import java.util.ArrayList;
@@ -27,10 +28,13 @@ public class TestQuestionsPage extends AppCompatActivity {
         if(extras != null){
             String TitleOfTest = extras.getString("TitleOfTest");
             if (Objects.equals(TitleOfTest, "Anxiety")){
-                testQuestionsScreenModelArrayList.add(new TestQuestionsScreenModel("feg","rgvr","sdrfber","rsdtb","rgvr","rfbsd","drfbd","srfbsr"));
+                testQuestionsScreenModelArrayList.add(new TestQuestionsScreenModel(
+                        getString(R.string.AnxietyQuestionTitle),getString(R.string.AnxietyQuestion1),
+                        getString(R.string.AnxietyQuestion2),getString(R.string.AnxietyQuestion3),
+                        getString(R.string.AnxietyQuestion4),getString(R.string.AnxietyQuestion5),
+                        getString(R.string.AnxietyQuestion6),getString(R.string.AnxietyQuestion7)));
+            }//else conditions pending
 
-
-            }
         }
 
 

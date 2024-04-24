@@ -19,7 +19,7 @@
                     android:id="@+id/testSampleTitle1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="@string/anxiety_test"
+                    android:text="@string/AnxietyQuestionTitle"
                     android:layout_margin="20sp"
                     android:textSize="26sp"
                     android:textStyle="bold"
@@ -46,7 +46,7 @@
                         android:id="@+id/testSampleQuestion1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_1_feeling_nervous_anxious_or_on_edge"
+                        android:text="@string/AnxietyQuestion1"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -104,7 +104,7 @@
                         android:id="@+id/testSampleQuestion2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_2_not_being_able_to_stop_or_control_worrying"
+                        android:text="@string/AnxietyQuestion2"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -161,7 +161,7 @@
                         android:id="@+id/testSampleQuestion3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_3_worrying_too_much_about_different_things"
+                        android:text="@string/AnxietyQuestion3"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -218,7 +218,7 @@
                         android:id="@+id/testSampleQuestion4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_4_trouble_relaxing"
+                        android:text="@string/AnxietyQuestion4"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -275,7 +275,7 @@
                         android:id="@+id/testSampleQuestion5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_5_being_so_restless_that_it_is_hard_to_sit_still"
+                        android:text="@string/AnxietyQuestion5"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -332,7 +332,7 @@
                         android:id="@+id/testSampleQuestion6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_6_becoming_easily_annoyed_or_irritable"
+                        android:text="@string/AnxietyQuestion6"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -389,7 +389,7 @@
                         android:id="@+id/testSampleQuestion7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_7_feeling_afraid_as_if_something_awful_might_happen"
+                        android:text="@string/AnxietyQuestion7"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
 
@@ -435,7 +435,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="10sp"
                 android:backgroundTint="#094D83"
-                android:text="@string/submit"
+                android:text="@string/QuestionsSubmit"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 app:cornerRadius="8dp" />

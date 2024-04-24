@@ -16,6 +16,8 @@ public class TestQuestionsScreenModel {
         this.testQuestion5 = testQuestion5;
         this.testQuestion6 = testQuestion6;
         this.testQuestion7 = testQuestion7;
+
+        //binding for the unput answers
     }
 
     public String getTestTitle() {
