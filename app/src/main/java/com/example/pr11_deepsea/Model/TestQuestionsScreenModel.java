@@ -1,13 +1,13 @@
 package com.example.pr11_deepsea.Model;
 
-public class TestModel {
+public class TestQuestionsScreenModel {
     private String testTitle, testQuestion1, testQuestion2,testQuestion3,testQuestion4,
             testQuestion5, testQuestion6,testQuestion7;
 
-    public TestModel() {
+    public TestQuestionsScreenModel() {
     }
 
-    public TestModel(String testTitle, String testQuestion1, String testQuestion2, String testQuestion3, String testQuestion4, String testQuestion5, String testQuestion6, String testQuestion7) {
+    public TestQuestionsScreenModel(String testTitle, String testQuestion1, String testQuestion2, String testQuestion3, String testQuestion4, String testQuestion5, String testQuestion6, String testQuestion7) {
         this.testTitle = testTitle;
         this.testQuestion1 = testQuestion1;
         this.testQuestion2 = testQuestion2;

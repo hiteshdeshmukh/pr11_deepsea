@@ -44,7 +44,11 @@ public class TestHomeScreen1Adapter extends RecyclerView.Adapter<TestHomeScreen1
         holder.binding.testScreenTestCardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                v.getContext().startActivity(new Intent(context, TestQuestionsPage.class));
+                //v.getContext().startActivity(new Intent(context, TestQuestionsPage.class));
+                String value = testHomeScreen1Model.getTestScreen1Title1();
+                Intent intent = new Intent(context, TestQuestionsPage.class);
+                intent.putExtra("TitleOfTest", value);
+                v.getContext().startActivity(intent);
             }
         });
 

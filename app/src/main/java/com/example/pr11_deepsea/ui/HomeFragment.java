@@ -1,24 +1,18 @@
 package com.example.pr11_deepsea.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.pr11_deepsea.Adapter.TestHomeScreen1Adapter;
 import com.example.pr11_deepsea.Model.TestHomeScreen1Model;
-import com.example.pr11_deepsea.Model.TestModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.FragmentHomeBinding;
-import com.example.pr11_deepsea.databinding.HomeTestRecyclerSampleBinding;
-import com.example.pr11_deepsea.ui.Features.TestQuestionsPage;
 
 import java.util.ArrayList;
 

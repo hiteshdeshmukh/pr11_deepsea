@@ -2,20 +2,15 @@ package com.example.pr11_deepsea.ui.Features;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.pr11_deepsea.Adapter.TestAdapter;
-import com.example.pr11_deepsea.Model.TestModel;
+import com.example.pr11_deepsea.Adapter.TestQuestionsScreenAdapter;
+import com.example.pr11_deepsea.Model.TestQuestionsScreenModel;
 import com.example.pr11_deepsea.databinding.ActivityTestQuestionsPageBinding;
 
-import com.example.pr11_deepsea.R;
-
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class TestQuestionsPage extends AppCompatActivity {
 
@@ -26,13 +21,23 @@ public class TestQuestionsPage extends AppCompatActivity {
         binding = ActivityTestQuestionsPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        ArrayList<TestModel> testModelArrayList = new ArrayList<>();
-        testModelArrayList.add(new TestModel("feg","rgvr","sdrfber","rsdtb","rgvr","rfbsd","drfbd","srfbsr"));
+        ArrayList<TestQuestionsScreenModel> testQuestionsScreenModelArrayList = new ArrayList<>();
 
-        TestAdapter testAdapter = new TestAdapter(testModelArrayList,this);
+        Bundle extras = getIntent().getExtras();
+        if(extras != null){
+            String TitleOfTest = extras.getString("TitleOfTest");
+            if (Objects.equals(TitleOfTest, "Anxiety")){
+                testQuestionsScreenModelArrayList.add(new TestQuestionsScreenModel("feg","rgvr","sdrfber","rsdtb","rgvr","rfbsd","drfbd","srfbsr"));
+
+
+            }
+        }
+
+
+        TestQuestionsScreenAdapter testQuestionsScreenAdapter = new TestQuestionsScreenAdapter(testQuestionsScreenModelArrayList,this);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         binding.testQuestionPageRecycler1.setLayoutManager(layoutManager);
-        binding.testQuestionPageRecycler1.setAdapter(testAdapter);
+        binding.testQuestionPageRecycler1.setAdapter(testQuestionsScreenAdapter);
 
     }
 }
