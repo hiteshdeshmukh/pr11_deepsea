@@ -9,20 +9,22 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.pr11_deepsea.R;
+import com.example.pr11_deepsea.databinding.FragmentProfileBinding;
 
 
 public class ProfileFragment extends Fragment {
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
+    FragmentProfileBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        binding = FragmentProfileBinding.inflate(inflater, container,false);
+        View view = binding.getRoot();
+
+
+
+
+        return view;
     }
 }
