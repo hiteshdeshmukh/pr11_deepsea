@@ -21,6 +21,7 @@ import com.example.pr11_deepsea.Model.PostModel;
 import com.example.pr11_deepsea.Model.UserModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.ActivityAddPostBinding;
+import com.example.pr11_deepsea.ui.SecrecyFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -133,6 +134,8 @@ public class AddPostActivity extends AppCompatActivity {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     Toast.makeText(AddPostActivity.this,"Posted Successfully",Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(AddPostActivity.this, SecrecyFragment.class);
+                                    startActivity(intent);
                                 }
                             });
 
@@ -156,6 +159,8 @@ public class AddPostActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onSuccess(Void unused) {
                                                     Toast.makeText(AddPostActivity.this,"Posted Successfully",Toast.LENGTH_SHORT).show();
+                                                    Intent intent = new Intent(AddPostActivity.this, SecrecyFragment.class);
+                                                    startActivity(intent);
                                                 }
                                             });
                                 }
