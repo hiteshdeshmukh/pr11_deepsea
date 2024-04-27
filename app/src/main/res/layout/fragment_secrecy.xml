@@ -27,6 +27,15 @@
             android:layout_height="wrap_content"
             />
 
+        <com.todkars.shimmer.ShimmerRecyclerView
+            android:id="@+id/shimmer_PostRecycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:shimmer_recycler_layout="@layout/layout_demo_post_shimmering"
+            app:shimmer_recycler_item_count="10" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/secrecyActionButton"
             android:layout_width="wrap_content"

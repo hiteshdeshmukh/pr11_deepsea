@@ -51,15 +51,22 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
-    implementation("com.makeramen:roundedimageview:2.3.0")
-
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
 
     implementation("com.google.android.gms:play-services-auth:21.1.0")
 
     implementation("com.google.firebase:firebase-storage")
 
+
+    implementation("com.makeramen:roundedimageview:2.3.0")
+
     implementation("com.squareup.picasso:picasso:2.8")
 
     implementation("com.github.marlonlom:timeago:4.0.3")
+
+
+
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("com.todkars:shimmer-recyclerview:0.4.1")
+
 }

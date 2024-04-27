@@ -46,6 +46,9 @@ public class SecrecyFragment extends Fragment {
         binding = FragmentSecrecyBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
+
+
+
         binding.secrecyActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +62,10 @@ public class SecrecyFragment extends Fragment {
         PostAdapter postAdapter = new PostAdapter(postModelArrayList,getContext());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         binding.postRecycler1.setLayoutManager(layoutManager);
+
+        binding.shimmerPostRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()),R.layout.layout_demo_post_shimmering);
+        binding.shimmerPostRecyclerView.showShimmer();
+
         binding.postRecycler1.setAdapter(postAdapter);
 
         database.getReference().child("posts").addValueEventListener(new ValueEventListener() {
@@ -72,6 +79,7 @@ public class SecrecyFragment extends Fragment {
                     }
                     postModelArrayList.add(post);
                 }
+                binding.shimmerPostRecyclerView.hideShimmer();
                 postAdapter.notifyDataSetChanged();
             }
 
