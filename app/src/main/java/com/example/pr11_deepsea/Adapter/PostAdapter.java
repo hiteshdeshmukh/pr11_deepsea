@@ -22,7 +22,7 @@ import com.example.pr11_deepsea.Model.CommentModel;
 import com.example.pr11_deepsea.Model.PostModel;
 import com.example.pr11_deepsea.Model.UserModel;
 import com.example.pr11_deepsea.R;
-import com.example.pr11_deepsea.databinding.HomeSecrecyPostSampleBinding;
+import com.example.pr11_deepsea.databinding.SecrecyPostSampleBinding;
 import com.github.marlonlom.utilities.timeago.TimeAgo;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -35,7 +35,6 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
-import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -52,7 +51,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.home_secrecy_post_sample, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.secrecy_post_sample, parent, false);
         return new viewHolder(view);
     }
 
@@ -310,10 +309,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
 
     public class viewHolder extends RecyclerView.ViewHolder{
 
-        HomeSecrecyPostSampleBinding binding;
+        SecrecyPostSampleBinding binding;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            binding = HomeSecrecyPostSampleBinding.bind(itemView);
+            binding = SecrecyPostSampleBinding.bind(itemView);
         }
     }
 }
