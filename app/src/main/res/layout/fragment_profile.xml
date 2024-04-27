@@ -54,12 +54,12 @@
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/ProfileUsername0"
-                    style="@style/TextColor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Username" />
+<!--                <TextView-->
+<!--                    android:id="@+id/ProfileUsername0"-->
+<!--                    style="@style/TextColor"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Username" />-->
 
             </LinearLayout>
 
@@ -77,14 +77,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Thinking:" />
+                android:text="Thoughts:" />
 
             <TextView
-                android:id="@+id/profileBio1"
+                android:id="@+id/profileThought1"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 style="@style/TextColor"
                 android:text="Maksad nahi bhulna dosto" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact::" />
+
+            <TextView
+                android:id="@+id/profileContactEmail1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                style="@style/TextColor"
+                android:text="Email Address" />
+
+            <TextView
+                android:id="@+id/profileContactNumber1"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                style="@style/TextColor"
+                android:text="Watsapp No." />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +112,7 @@
                 android:text="Location:" />
 
             <TextView
-                android:id="@+id/profileWebsite1"
+                android:id="@+id/profileLocation1"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
                 style="@style/TextColor"

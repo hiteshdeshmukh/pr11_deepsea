@@ -6,6 +6,8 @@ public class UserModel {
 
     private String UserId;
 
+    //private String Thought, Location;
+
     public String getUserId() {
         return UserId;
     }
