@@ -32,7 +32,7 @@
                 android:layout_height="30dp"
                 android:scaleType="centerCrop"
                 style="@style/IconBackground"
-                android:src="@drawable/h9"
+                android:src="@drawable/baseline_person_outline_24"
                 app:riv_border_color="#333333"
                 app:riv_corner_radius="3dip"
                 app:riv_mutate_background="false"
@@ -95,7 +95,7 @@
             android:id="@+id/PostImage1"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:src="@drawable/h9" />
+            android:src="@drawable/baseline_image_24" />
 
         <RelativeLayout
             android:layout_width="match_parent"
