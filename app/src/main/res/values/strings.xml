@@ -3,8 +3,6 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_secrecy">Secrecy</string>
     <string name="title_profile">Profile</string>
     <string name="default_web_client_id">414320372365-7gdugqp55opjd92b6on96nfp0ts877v0.apps.googleusercontent.com</string>
@@ -17,7 +15,7 @@
     <string name="socializing0">Engaging in creative activities like painting, writing, or playing music can be therapeutic and provide a sense of accomplishment. </string>
     <string name="eating"> A balanced diet rich in fruits, vegetables, and whole grains can support overall well-being. </string>
     <string name="sleep">Prioritize good sleep hygiene to ensure adequate rest, as lack of sleep can negatively affect mental health. </string>
-    <string name="empty">strings/</string>
+
     <string name="title_activity">Activity</string>
     <string name="title_appointment">Appointment</string>
     <string name="title_test">Tests</string>
@@ -36,34 +34,93 @@
     <string name="several_days">Several days</string>
     <string name="more_than_half_the_days">More than half the days</string>
     <string name="nearly_everyday">Nearly everyday</string>
-    <string name="AnxietyQuestion2">2. Not being able to stop or control worrying</string>
-    <string name="AnxietyQuestion1">1. Feeling nervous, anxious, or on edge</string>
+    <string name="autism_test">Autism Test</string>
+
+
+
     <string name="AnxietyQuestionTitle">Anxiety test</string>
+    <string name="AnxietyQuestion1">1. Feeling nervous, anxious, or on edge</string>
+    <string name="AnxietyQuestion2">2. Not being able to stop or control worrying</string>
     <string name="AnxietyQuestion3">3. Worrying too much about different things</string>
     <string name="AnxietyQuestion4">4. Trouble relaxing</string>
     <string name="QuestionsSubmit">Submit</string>
-    <string name="_1_little_interest_or_pleasure_in_doing_things">1. Little interest or pleasure in doing things</string>
-    <string name="_2_feeling_down_depressed_or_hopeless">2. Feeling down, depressed, or hopeless</string>
-    <string name="_3_trouble_falling_or_staying_asleep_or_sleeping_too_much">3. Trouble falling or staying asleep, or sleeping too much</string>
-    <string name="_4_feeling_tired_or_having_little_energy">4. Feeling tired or having little energy</string>
-    <string name="_5_poor_appetite_or_overeating">5. Poor appetite or overeating</string>
-    <string name="_6_feeling_bad_about_yourself_or_that_you_are_a_failure_or_have_let_yourself_or_your_family_down">6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</string>
-    <string name="_7_trouble_concentrating_on_things_such_as_reading_the_newspaper_or_watching_television">7. Trouble concentrating on things, such as reading the newspaper or watching television</string>
-    <string name="_8_moving_or_speaking_so_slowly_that_other_people_could_have_noticed_or_the_opposite_being_so_fidgety_or_restless_that_you_have_been_moving_around_a_lot_more_than_usual">8. Moving or speaking so slowly that other people could have noticed Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual</string>
-    <string name="_9_thoughts_that_you_would_be_better_off_dead_or_of_hurting_yourself">9. Thoughts that you would be better off dead, or of hurting yourself</string>
-    <string name="_10_if_you_checked_off_any_problems_how_difficult_have_these_problems_made_it_for_you_at_work_home_or_with_other_people">10. If you checked off any problems, how difficult have these problems made it for you at work, home, or with other people?</string>
     <string name="AnxietyQuestion5">5. Being so restless that it is hard to sit still</string>
     <string name="AnxietyQuestion6">6. Becoming easily annoyed or irritable</string>
     <string name="AnxietyQuestion7">7. Feeling afraid, as if something awful might happen</string>
-    <string name="autism_test">Autism Test</string>
-    <string name="_1_i_like_to_do_things_the_same_way">1. I like to do things the same way</string>
-    <string name="_2_i_would_rather_hang_out_alone_rather_than_go_to_a_party_with_friends">2. I would rather hang out alone rather than go to a party with friends</string>
-    <string name="_3_i_tend_to_notice_small_details_that_others_don_t">3. I tend to notice small details that others don’t</string>
-    <string name="_4_i_find_myself_drawn_more_strongly_to_people_than_to_things_or_solitary_activities_including_video_games">4. I find myself drawn more strongly to people than to things or solitary activities (including video games)</string>
-    <string name="_5_i_enjoy_social_gatherings_and_or_find_social_situations_easy">5. I enjoy social gatherings and/or find social situations easy</string>
-    <string name="personality">Personality</string>
-    <string name="disorder">Disorder</string>
-    <string name="personality_disorder_test">Personality Disorder Test</string>
+
+
+    <string name="DepressionTestTitle">Depression Test</string>
+    <string name="DepressionQuestion1">1. Little interest or pleasure in doing things</string>
+    <string name="DepressionQuestion2">2. Feeling down, depressed, or hopeless</string>
+    <string name="DepressionQuestion3">3. Trouble falling or staying asleep, or sleeping too much</string>
+    <string name="DepressionQuestion4">4. Feeling tired or having little energy</string>
+    <string name="DepressionQuestion5">5. Poor appetite or overeating</string>
+    <string name="DepressionQuestion6">6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down</string>
+    <string name="DepressionQuestion7">7. Trouble concentrating on things, such as reading the newspaper or watching television</string>
+
+
+    <string name="PersonalityDisorderTestTitle">Personality Disorder Test</string>
+    <string name="PersonalityQuestion1">1. My emotions change very quickly, and I experience intense episodes of sadness, irritability, and anxiety or panic attacks.</string>
+    <string name="PersonalityQuestion2">2. My level of anger is often inappropriate, intense, and difficult to control.</string>
+    <string name="PersonalityQuestion3">3. Now, or in the past, when upset, I have engaged in recurrent suicidal behaviors, gestures, threats, or self-injurious behavior such as cutting, burning, or hitting myself. </string>
+    <string name="PersonalityQuestion4">4. I have a significant and persistently unstable image or sense of myself, or of who I am or what I truly believe in.</string>
+    <string name="PersonalityQuestion5">5. I have very suspicious ideas, and am even paranoid (falsely believe that others are plotting to cause me harm) or I experience episodes under stress when I feel that I, other people, or the situation is somewhat unreal.</string>
+    <string name="PersonalityQuestion6">6. I engage in two or more self-damaging acts such as excessive spending, unsafe and inappropriate sexual conduct, substance abuse, reckless driving, and binge eating.</string>
+    <string name="PersonalityQuestion7">7. I engage in frantic efforts to avoid real or imagined abandonment by people who are close to me.</string>
+
+
+
+    <string name="SucidalityTestTitle">Sucidality Test</string>
+    <string name="SucidalityQuestion1">1. Have you been feeling hopeless or helpless lately?</string>
+    <string name="SucidalityQuestion2">2. Have you experienced a loss of interest in activities you used to enjoy?</string>
+    <string name="SucidalityQuestion3">3. Do you often feel like a burden to others?</string>
+    <string name="SucidalityQuestion4">4. Have you been experiencing significant changes in your sleep patterns (either sleeping too much or too little)?</string>
+    <string name="SucidalityQuestion5">5. Have you been experiencing changes in your appetite or weight (either eating too much or too little)?</string>
+    <string name="SucidalityQuestion6">6. Have you been feeling unusually fatigued or lacking in energy?</string>
+    <string name="SucidalityQuestion7">7. Have you been isolating yourself from friends or family?</string>
+
+
+
+    <string name="EatingDisorderTestTitle">Eating Disorder Test</string>
+    <string name="EatingQuestion1">1. When you lose control over your eating, do you eat even though you are not hungry?</string>
+    <string name="EatingQuestion2">2. Do you struggle to control when and how much you eat?</string>
+    <string name="EatingQuestion3">3. When you lose control over your eating, do you eat more rapidly than you usually do?</string>
+    <string name="EatingQuestion4">4. Do you find yourself eating more when you try to restrict how much you eat?</string>
+    <string name="EatingQuestion5">5. When you lose control over your eating, do you eat more food than others would under similar circumstances?</string>
+    <string name="EatingQuestion6">6. When you lose control over your eating, do you feel like you cannot stop eating once you\'ve started?</string>
+    <string name="EatingQuestion7">7. When you cannot stop eating, do you eat so much that you feel uncomfortably full afterwards?</string>
+
+
+    <string name="DissociationTestTitle">Dissociation Test</string>
+    <string name="DissociationQuestion1">1.	Do you ever feel like you are disconnected from your thoughts, feelings, or surroundings?</string>
+    <string name="DissociationQuestion2">2.	Have you experienced periods of time where you feel like you are watching yourself from outside your body?</string>
+    <string name="DissociationQuestion3">3.	Do you ever feel like the world around you is unreal or dreamlike?</string>
+    <string name="DissociationQuestion4">4.	Have you had moments where you could not remember significant parts of your day or events that happened?</string>
+    <string name="DissociationQuestion5">5.	Do you ever find yourself suddenly in a place without remembering how you got there?</string>
+    <string name="DissociationQuestion6">6.	Have you experienced a sense of being detached from your emotions, as if you are experiencing them from a distance?</string>
+    <string name="DissociationQuestion7">7.	Do you ever feel like your body does not belong to you, or that parts of your body feel numb or not like your own?</string>
+
+
+    <string name="ADHDTestTitle">ADHD Test</string>
+    <string name="ADHDQuestion1">1. Do you tend to avoid or delay getting started on a new important task?</string>
+    <string name="ADHDQuestion2">2. Do you find that the majority of your tasks (work/school assignments, etc.) are boring or repetitive, making them difficult to complete?</string>
+    <string name="ADHDQuestion3">3. Do you find yourself making careless mistakes when engaged in something you feel is boring, repetitive, or difficult?</string>
+    <string name="ADHDQuestion4">4. How often do you feel restless or fidgety?</string>
+    <string name="ADHDQuestion5">5. Do you regularly fail to remember important appointments or obligations?</string>
+    <string name="ADHDQuestion6">6. Do you have difficulty concentrating on people when they are speaking to you?</string>
+    <string name="ADHDQuestion7">7. Do you frequently misplace things (or have difficulty finding them)?</string>
+
+
+    <string name="SleepTitle">Sleep Test</string>
+    <string name="SleepQuestion1">1. Do you have trouble falling asleep?</string>
+    <string name="SleepQuestion2">2. Do you have trouble staying awake during the day?</string>
+    <string name="SleepQuestion3">3. Do you get the amount of sleep you needed?</string>
+    <string name="SleepQuestion4">4. Do you snore when you sleep?</string>
+    <string name="SleepQuestion5">5. Do you take naps that are 5 minutes or longer during the day?</string>
+    <string name="SleepQuestion6">6. Do you feel that your sleep was not quiet (e.g. feeling tense, moving restlessly, can\'t get comfortable)?</string>
+    <string name="SleepQuestion7">7. Do you awaken short of breath or with a headache in the morning?</string>
+
+
 
 
 </resources>
