@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,7 +28,7 @@ public class TestQuestionsScreenAdapter extends RecyclerView.Adapter<TestQuestio
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.home_test_recycler_sample,parent,false);
+        View view = LayoutInflater.from(context).inflate(R.layout.home_test_recycler_sample, parent, false);
         return new viewHolder(view);
     }
 
@@ -43,7 +44,36 @@ public class TestQuestionsScreenAdapter extends RecyclerView.Adapter<TestQuestio
         holder.binding.testSampleQuestion6.setText(testQuestionsScreenModel.getTestQuestion6());
         holder.binding.testSampleQuestion7.setText(testQuestionsScreenModel.getTestQuestion7());
 
+        holder.binding.testSampleSubmitButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                int answerTotal = 0;
+
+                if (holder.binding.radioButton1Que1.isChecked()){
+                    answerTotal++;
+                } else if (holder.binding.radioButton2Que1.isChecked()) {
+                    answerTotal = answerTotal+2;
+                }else if (holder.binding.radioButton3Que1.isChecked()) {
+                    answerTotal = answerTotal+3;
+                }else if (holder.binding.radioButton4Que1.isChecked()) {
+                    answerTotal = answerTotal+4;
+                }
+
+                if (holder.binding.radioButton1Que2.isChecked()){
+                    answerTotal++;
+                } else if (holder.binding.radioButton2Que2.isChecked()) {
+                    answerTotal = answerTotal+2;
+                }else if (holder.binding.radioButton3Que2.isChecked()) {
+                    answerTotal = answerTotal+3;
+                }else if (holder.binding.radioButton4Que2.isChecked()) {
+                    answerTotal = answerTotal+4;
+                }
+
+
+                Toast.makeText(context,String.valueOf(answerTotal), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -52,8 +82,9 @@ public class TestQuestionsScreenAdapter extends RecyclerView.Adapter<TestQuestio
         return testQuestionsScreenModelArrayList.size();
     }
 
-    public class viewHolder extends RecyclerView.ViewHolder{
+    public class viewHolder extends RecyclerView.ViewHolder {
         HomeTestRecyclerSampleBinding binding;
+
         public viewHolder(@NonNull View itemView) {
             super(itemView);
             binding = HomeTestRecyclerSampleBinding.bind(itemView);

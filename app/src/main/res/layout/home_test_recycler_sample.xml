@@ -1,446 +1,443 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:background="@color/gray">
 
-            <Toolbar
+            <TextView
+                android:id="@+id/testSampleTitle1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/gray">
+                android:layout_margin="20sp"
+                android:text="@string/AnxietyQuestionTitle"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/testSampleTitle1"
+                    android:id="@+id/testSampleQuestion1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/AnxietyQuestionTitle"
-                    android:layout_margin="20sp"
-                    android:textSize="26sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"/>
-            </Toolbar>
+                    android:text="@string/AnxietyQuestion1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white"
-                >
-
-                <LinearLayout
+                <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10sp"
-                    android:background="@color/white">
+                    android:layout_height="match_parent">
 
-                    <TextView
-                        android:id="@+id/testSampleQuestion1"
+                    <RadioButton
+                        android:id="@+id/radioButton1Que1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/AnxietyQuestion1"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="@string/not_at_all"
+                        android:textColor="@color/black" />
 
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        >
-
-                        <RadioButton
-                            android:id="@+id/radioButton1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButton2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/several_days"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButton3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/more_than_half_the_days" />
-
-                        <RadioButton
-                            android:id="@+id/radioButton4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/nearly_everyday"
-                            android:textColor="@color/black"/>
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10sp"
-                    android:background="@color/white">
-
-                    <TextView
-                        android:id="@+id/testSampleQuestion2"
+                    <RadioButton
+                        android:id="@+id/radioButton2Que1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/AnxietyQuestion2"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="@string/several_days"
+                        android:textColor="@color/black" />
 
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <RadioButton
-                            android:id="@+id/radioButton5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButton6"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/several_days"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButton7"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/more_than_half_the_days" />
-
-                        <RadioButton
-                            android:id="@+id/radioButton8"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/nearly_everyday" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10sp"
-                    android:background="@color/white">
-
-                    <TextView
-                        android:id="@+id/testSampleQuestion3"
+                    <RadioButton
+                        android:id="@+id/radioButton3Que1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/AnxietyQuestion3"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="@string/more_than_half_the_days"
+                        android:textColor="@color/black" />
 
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
-
-                        <RadioButton
-                            android:id="@+id/radioButtona"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButtonb"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/several_days"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButtonc"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/more_than_half_the_days" />
-
-                        <RadioButton
-                            android:id="@+id/radioButtond"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/nearly_everyday" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10sp"
-                    android:background="@color/white">
-
-                    <TextView
-                        android:id="@+id/testSampleQuestion4"
+                    <RadioButton
+                        android:id="@+id/radioButton4Que1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/AnxietyQuestion4"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="@string/nearly_everyday"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <RadioGroup
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white">
 
-                        <RadioButton
-                            android:id="@+id/radioButton13"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButton14"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/several_days"
-                            android:textColor="@color/black"/>
-
-                        <RadioButton
-                            android:id="@+id/radioButton15"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/more_than_half_the_days" />
-
-                        <RadioButton
-                            android:id="@+id/radioButton16"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/nearly_everyday" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white">
+                android:background="@color/white"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/testSampleQuestion2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10sp"
-                    android:background="@color/white">
+                    android:layout_height="wrap_content"
+                    android:text="@string/AnxietyQuestion2"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/testSampleQuestion5"
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton1Que2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/AnxietyQuestion5"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="@string/not_at_all"
+                        android:textColor="@color/black" />
 
-                    <RadioGroup
+                    <RadioButton
+                        android:id="@+id/radioButton2Que2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="wrap_content"
+                        android:text="@string/several_days"
+                        android:textColor="@color/black" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton17"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/radioButton3Que2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more_than_half_the_days"
+                        android:textColor="@color/black" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton18"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/several_days"
-                            android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/radioButton4Que2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearly_everyday"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                        <RadioButton
-                            android:id="@+id/radioButton19"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/more_than_half_the_days" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white">
 
-                        <RadioButton
-                            android:id="@+id/radioButton20"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/nearly_everyday" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white">
+                android:background="@color/white"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/testSampleQuestion3"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10sp"
-                    android:background="@color/white">
+                    android:layout_height="wrap_content"
+                    android:text="@string/AnxietyQuestion3"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/testSampleQuestion6"
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButtona"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/AnxietyQuestion6"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="@string/not_at_all"
+                        android:textColor="@color/black" />
 
-                    <RadioGroup
+                    <RadioButton
+                        android:id="@+id/radioButtonb"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="wrap_content"
+                        android:text="@string/several_days"
+                        android:textColor="@color/black" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton21"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/radioButtonc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more_than_half_the_days"
+                        android:textColor="@color/black" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton22"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/several_days"
-                            android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/radioButtond"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearly_everyday"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                        <RadioButton
-                            android:id="@+id/radioButton23"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/more_than_half_the_days" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white">
 
-                        <RadioButton
-                            android:id="@+id/radioButton24"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/nearly_everyday" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:layout_margin="10sp"
-                app:cardBackgroundColor="@color/white">
+                android:background="@color/white"
+                android:orientation="vertical">
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/testSampleQuestion4"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_margin="10sp"
-                    android:background="@color/white">
+                    android:layout_height="wrap_content"
+                    android:text="@string/AnxietyQuestion4"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
 
-                    <TextView
-                        android:id="@+id/testSampleQuestion7"
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/AnxietyQuestion7"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="@string/not_at_all"
+                        android:textColor="@color/black" />
 
-                    <RadioGroup
+                    <RadioButton
+                        android:id="@+id/radioButton14"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" >
+                        android:layout_height="wrap_content"
+                        android:text="@string/several_days"
+                        android:textColor="@color/black" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton25"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/not_at_all"
-                            android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/radioButton15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more_than_half_the_days"
+                        android:textColor="@color/black" />
 
-                        <RadioButton
-                            android:id="@+id/radioButton26"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/several_days"
-                            android:textColor="@color/black"/>
+                    <RadioButton
+                        android:id="@+id/radioButton16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearly_everyday"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                        <RadioButton
-                            android:id="@+id/radioButton27"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/more_than_half_the_days" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white">
 
-                        <RadioButton
-                            android:id="@+id/radioButton28"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"
-                            android:text="@string/nearly_everyday" />
-                    </RadioGroup>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <Button
-                android:id="@+id/testSampleSubmitButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_margin="10sp"
-                android:backgroundTint="#094D83"
-                android:text="@string/QuestionsSubmit"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:cornerRadius="8dp" />
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/testSampleQuestion5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AnxietyQuestion5"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_at_all"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/several_days"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more_than_half_the_days"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearly_everyday"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/testSampleQuestion6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AnxietyQuestion6"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_at_all"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/several_days"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more_than_half_the_days"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearly_everyday"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10sp"
+            android:background="@color/white"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10sp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/testSampleQuestion7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/AnxietyQuestion7"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/radioButton25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/not_at_all"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/several_days"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more_than_half_the_days"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton28"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearly_everyday"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/testSampleSubmitButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:backgroundTint="#094D83"
+            android:text="@string/QuestionsSubmit"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:cornerRadius="8dp" />
 
 
-        </LinearLayout>
+    </LinearLayout>
 
 </ScrollView>

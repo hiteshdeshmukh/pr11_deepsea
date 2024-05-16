@@ -49,6 +49,13 @@ public class EditProfileActivity extends AppCompatActivity {
             }
         });
 
+        binding.editProfileConfirmChangeButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
     }
 

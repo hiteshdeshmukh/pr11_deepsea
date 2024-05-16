@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pr11_deepsea.Model.TestHomeScreen1Model;
 import com.example.pr11_deepsea.R;
-import com.example.pr11_deepsea.databinding.TestScreen1Recycler1Binding;
+import com.example.pr11_deepsea.databinding.TestScreen1Recycler1SampleBinding;
 import com.example.pr11_deepsea.ui.Features.TestQuestionsPage;
 
 import java.util.ArrayList;
@@ -29,7 +29,7 @@ public class TestHomeScreen1Adapter extends RecyclerView.Adapter<TestHomeScreen1
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.test_screen1_recycler1, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.test_screen1_recycler1_sample, parent, false);
         return new viewHolder(view);
     }
 
@@ -63,10 +63,10 @@ public class TestHomeScreen1Adapter extends RecyclerView.Adapter<TestHomeScreen1
 
     public class viewHolder extends RecyclerView.ViewHolder{
 
-        TestScreen1Recycler1Binding binding;
+        TestScreen1Recycler1SampleBinding binding;
         public viewHolder(@NonNull View itemView) {
             super(itemView);
-            binding = TestScreen1Recycler1Binding.bind(itemView);
+            binding = TestScreen1Recycler1SampleBinding.bind(itemView);
         }
     }
 }
