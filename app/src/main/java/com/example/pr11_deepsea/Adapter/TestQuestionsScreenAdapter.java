@@ -70,6 +70,58 @@ public class TestQuestionsScreenAdapter extends RecyclerView.Adapter<TestQuestio
                     answerTotal = answerTotal+4;
                 }
 
+                if (holder.binding.radioButton1Que3.isChecked()){
+                    answerTotal++;
+                } else if (holder.binding.radioButton2Que3.isChecked()) {
+                    answerTotal = answerTotal+2;
+                }else if (holder.binding.radioButton3Que3.isChecked()) {
+                    answerTotal = answerTotal+3;
+                }else if (holder.binding.radioButton4Que3.isChecked()) {
+                    answerTotal = answerTotal+4;
+                }
+
+                if (holder.binding.radioButton1Que4.isChecked()){
+                    answerTotal++;
+                } else if (holder.binding.radioButton2Que4.isChecked()) {
+                    answerTotal = answerTotal+2;
+                }else if (holder.binding.radioButton3Que4.isChecked()) {
+                    answerTotal = answerTotal+3;
+                }else if (holder.binding.radioButton4Que4.isChecked()) {
+                    answerTotal = answerTotal+4;
+                }
+
+                if (holder.binding.radioButton1Que5.isChecked()){
+                    answerTotal++;
+                } else if (holder.binding.radioButton2Que5.isChecked()) {
+                    answerTotal = answerTotal+2;
+                }else if (holder.binding.radioButton3Que5.isChecked()) {
+                    answerTotal = answerTotal+3;
+                }else if (holder.binding.radioButton4Que5.isChecked()) {
+                    answerTotal = answerTotal+4;
+                }
+
+                if (holder.binding.radioButton1Que6.isChecked()){
+                    answerTotal++;
+                } else if (holder.binding.radioButton2Que6.isChecked()) {
+                    answerTotal = answerTotal+2;
+                }else if (holder.binding.radioButton3Que6.isChecked()) {
+                    answerTotal = answerTotal+3;
+                }else if (holder.binding.radioButton4Que6.isChecked()) {
+                    answerTotal = answerTotal+4;
+                }
+
+                if (holder.binding.radioButton1Que7.isChecked()){
+                    answerTotal++;
+                } else if (holder.binding.radioButton2Que7.isChecked()) {
+                    answerTotal = answerTotal+2;
+                }else if (holder.binding.radioButton3Que7.isChecked()) {
+                    answerTotal = answerTotal+3;
+                }else if (holder.binding.radioButton4Que7.isChecked()) {
+                    answerTotal = answerTotal+4;
+                }
+
+
+
 
                 Toast.makeText(context,String.valueOf(answerTotal), Toast.LENGTH_SHORT).show();
             }
