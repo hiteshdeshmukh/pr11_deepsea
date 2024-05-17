@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Thoughts" />
+            android:text="Age" />
 
         <EditText
             android:id="@+id/editProfileBio"
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="Email (To Display in Profile)" />
+            android:text="Gender" />
 
         <EditText
             android:id="@+id/editProfileEmail1"
