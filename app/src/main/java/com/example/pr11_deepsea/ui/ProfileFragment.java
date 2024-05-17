@@ -52,7 +52,9 @@ public class ProfileFragment extends Fragment {
                                     .into(binding.ProfileImage1);
 
                             binding.ProfileName0.setText(user.getName());
-                            //binding.ProfileUsername0.setText(user.Username());
+                            binding.profileContactEmail1.setText(user.getEmail());
+                            binding.profileContactNumber1.setText(user.getPhoneNo());
+                            binding.profileLocation1.setText(user.getLocation());
                         }
                     }
 

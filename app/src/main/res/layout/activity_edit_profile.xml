@@ -71,7 +71,7 @@
             android:text="Age" />
 
         <EditText
-            android:id="@+id/editProfileBio"
+            android:id="@+id/editProfileAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -86,7 +86,7 @@
             android:text="Gender" />
 
         <EditText
-            android:id="@+id/editProfileEmail1"
+            android:id="@+id/editProfileGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -113,7 +113,7 @@
             android:text="Location" />
 
         <EditText
-            android:id="@+id/editProfileGender"
+            android:id="@+id/editProfileLocation"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"

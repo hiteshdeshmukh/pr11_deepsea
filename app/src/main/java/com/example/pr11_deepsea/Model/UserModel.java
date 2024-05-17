@@ -6,6 +6,33 @@ public class UserModel {
 
     private String UserId;
 
+    private String gender, location;
+    private String age;
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
     //private String Thought, Location;
 
     public String getUserId() {

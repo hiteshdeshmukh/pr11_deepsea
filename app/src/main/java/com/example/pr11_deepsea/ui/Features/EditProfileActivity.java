@@ -7,19 +7,25 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.pr11_deepsea.Model.UserModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.ActivityEditProfileBinding;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 public class EditProfileActivity extends AppCompatActivity {
 
@@ -50,11 +56,55 @@ public class EditProfileActivity extends AppCompatActivity {
         });
 
 
+        database.getReference().child("Users").child(auth.getUid())
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                        if (snapshot.exists()) {
+                            UserModel userModel = snapshot.getValue(UserModel.class);
+                            Picasso.get()
+                                    .load(userModel.getProfilePhoto())
+                                    .placeholder(R.drawable.baseline_person_24)
+                                    .into(binding.ProfileImage1);
+                            binding.editProfilename.setText(userModel.getName());
+                            binding.editProfileAge.setText(userModel.getAge());
+                            binding.editProfileGender.setText(userModel.getGender());
+                            binding.editProfileNumber1.setText(userModel.getPhoneNo());
+                            binding.editProfileLocation.setText(userModel.getLocation());
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 
         binding.editProfileConfirmChangeButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                UserModel userModel = new UserModel();
+                userModel.setName(binding.editProfilename.getText().toString());
+                userModel.setAge(binding.editProfileAge.getText().toString());
+                userModel.setGender(binding.editProfileGender.getText().toString());
+                userModel.setPhoneNo(binding.editProfileNumber1.getText().toString());
+                userModel.setLocation(binding.editProfileLocation.getText().toString());
 
+                database.getReference().child("Users").child(auth.getUid())
+                        .child("name").setValue(userModel.getName());
+                database.getReference().child("Users").child(auth.getUid())
+                        .child("age").setValue(userModel.getAge());
+                database.getReference().child("Users").child(auth.getUid())
+                        .child("gender").setValue(userModel.getGender());
+                database.getReference().child("Users").child(auth.getUid())
+                        .child("phoneNo").setValue(userModel.getPhoneNo());
+                database.getReference().child("Users").child(auth.getUid())
+                        .child("location").setValue(userModel.getLocation());
+
+                Toast.makeText(EditProfileActivity.this, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -66,7 +116,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(data.getData()!=null){
+        if (data.getData() != null) {
             Uri uri = data.getData();
             binding.ProfileImage1.setImageURI(uri);
 
@@ -76,7 +126,7 @@ public class EditProfileActivity extends AppCompatActivity {
             reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Toast.makeText(getApplicationContext(),"Profile Photo Saved", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Profile Photo Saved", Toast.LENGTH_SHORT).show();
 
                     reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
