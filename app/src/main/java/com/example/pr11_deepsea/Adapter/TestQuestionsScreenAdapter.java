@@ -1,6 +1,7 @@
 package com.example.pr11_deepsea.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pr11_deepsea.Model.TestQuestionsScreenModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.HomeTestRecyclerSampleBinding;
+import com.example.pr11_deepsea.ui.Features.HomeTestResultActivity;
 
 import java.util.ArrayList;
 
@@ -121,9 +123,10 @@ public class TestQuestionsScreenAdapter extends RecyclerView.Adapter<TestQuestio
                 }
 
 
+                Intent intent = new Intent(context, HomeTestResultActivity.class);
+                intent.putExtra("TranferTestResultIntent", answerTotal);
+                context.startActivity(intent);
 
-
-                Toast.makeText(context,String.valueOf(answerTotal), Toast.LENGTH_SHORT).show();
             }
         });
 
