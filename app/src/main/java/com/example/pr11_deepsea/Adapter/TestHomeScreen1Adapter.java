@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.pr11_deepsea.Model.TestHomeScreen1Model;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.TestScreen1Recycler1SampleBinding;
+import com.example.pr11_deepsea.ui.Features.HomeTestResultActivity;
 import com.example.pr11_deepsea.ui.Features.TestQuestionsPage;
 
 import java.util.ArrayList;
@@ -46,9 +47,11 @@ public class TestHomeScreen1Adapter extends RecyclerView.Adapter<TestHomeScreen1
             public void onClick(View v) {
                 //v.getContext().startActivity(new Intent(context, TestQuestionsPage.class));
                 String value = testHomeScreen1Model.getTestScreen1Title1();
+
                 Intent intent = new Intent(context, TestQuestionsPage.class);
                 intent.putExtra("TitleOfTest", value);
                 v.getContext().startActivity(intent);
+
             }
         });
 

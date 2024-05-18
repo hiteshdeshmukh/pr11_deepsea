@@ -125,6 +125,8 @@ public class TestQuestionsScreenAdapter extends RecyclerView.Adapter<TestQuestio
 
                 Intent intent = new Intent(context, HomeTestResultActivity.class);
                 intent.putExtra("TranferTestResultIntent", answerTotal);
+                intent.putExtra("TransferTitleOfTest", holder.binding.testSampleTitle1.getText().toString());
+                //Toast.makeText(context, holder.binding.testSampleTitle1.getText().toString(), Toast.LENGTH_SHORT ).show();
                 context.startActivity(intent);
 
             }

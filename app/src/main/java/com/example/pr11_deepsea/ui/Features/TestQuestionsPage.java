@@ -1,5 +1,6 @@
 package com.example.pr11_deepsea.ui.Features;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +28,9 @@ public class TestQuestionsPage extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             String TitleOfTest = extras.getString("TitleOfTest");
+
+
+
             if (Objects.equals(TitleOfTest, "Anxiety")){
                 testQuestionsScreenModelArrayList.add(new TestQuestionsScreenModel(
                         getString(R.string.AnxietyQuestionTitle),getString(R.string.AnxietyQuestion1),
