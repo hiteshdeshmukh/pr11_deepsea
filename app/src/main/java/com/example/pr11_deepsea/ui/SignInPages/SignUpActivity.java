@@ -20,13 +20,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
 
     private ActivitySignUpBinding binding;
 
-    private FirebaseAuth auth;
+    FirebaseAuth auth;
+
+    FirebaseUser currentUser;
     FirebaseDatabase database;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
+        currentUser = auth.getCurrentUser();
 
         binding.signup1.setOnClickListener(new View.OnClickListener() {
 
@@ -77,5 +81,14 @@ public class SignUpActivity extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+        if (currentUser != null){
+            Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 }

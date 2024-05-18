@@ -69,7 +69,6 @@
     <string name="PersonalityQuestion7">7. I engage in frantic efforts to avoid real or imagined abandonment by people who are close to me.</string>
 
 
-
     <string name="SucidalityTestTitle">Sucidality Test</string>
     <string name="SucidalityQuestion1">1. Have you been feeling hopeless or helpless lately?</string>
     <string name="SucidalityQuestion2">2. Have you experienced a loss of interest in activities you used to enjoy?</string>
@@ -78,7 +77,6 @@
     <string name="SucidalityQuestion5">5. Have you been experiencing changes in your appetite or weight (either eating too much or too little)?</string>
     <string name="SucidalityQuestion6">6. Have you been feeling unusually fatigued or lacking in energy?</string>
     <string name="SucidalityQuestion7">7. Have you been isolating yourself from friends or family?</string>
-
 
 
     <string name="EatingDisorderTestTitle">Eating Disorder Test</string>
@@ -119,8 +117,6 @@
     <string name="SleepQuestion5">5. Do you take naps that are 5 minutes or longer during the day?</string>
     <string name="SleepQuestion6">6. Do you feel that your sleep was not quiet (e.g. feeling tense, moving restlessly, can\'t get comfortable)?</string>
     <string name="SleepQuestion7">7. Do you awaken short of breath or with a headache in the morning?</string>
-
-
 
 
 </resources>
