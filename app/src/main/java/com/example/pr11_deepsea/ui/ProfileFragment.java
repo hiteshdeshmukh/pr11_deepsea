@@ -5,11 +5,14 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.pr11_deepsea.Adapter.ProfileTestResultAdapter;
+import com.example.pr11_deepsea.Model.ProfileTestResultModel;
 import com.example.pr11_deepsea.Model.UserModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.FragmentProfileBinding;
@@ -21,6 +24,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 
 public class ProfileFragment extends Fragment {
@@ -63,6 +68,49 @@ public class ProfileFragment extends Fragment {
 
                     }
                 });
+
+        //Profile Test Result Recycler
+        ArrayList<ProfileTestResultModel> testResultModelArrayList = new ArrayList<>();
+
+       // testResultModelArrayList.add(new ProfileTestResultModel(4646,"jioegiv","ejiogje",56));
+
+
+        ProfileTestResultAdapter testResultAdapter = new ProfileTestResultAdapter(getContext(),testResultModelArrayList);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        binding.profileTestResultRecycler1.setAdapter(testResultAdapter);
+        binding.profileTestResultRecycler1.setLayoutManager(linearLayoutManager);
+
+        database.getReference().child("Users").child(auth.getUid())
+                .child("Tests").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        testResultModelArrayList.clear();
+
+                        for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                            ProfileTestResultModel testResultModel = dataSnapshot.getValue(ProfileTestResultModel.class);
+//                            if (testResultModel!=null){
+//                                testResultModel.setTestId(snapshot.getKey());
+//                            }
+
+                            testResultModelArrayList.add(testResultModel);
+
+                        }
+                        testResultAdapter.notifyDataSetChanged();
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+
+
+
+
+
+
 
         binding.profileEditButton1.setOnClickListener(new View.OnClickListener() {
             @Override

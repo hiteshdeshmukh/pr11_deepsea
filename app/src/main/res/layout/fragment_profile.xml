@@ -22,10 +22,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
-           android:layout_marginStart="10dp"
-            android:gravity="center"
-            android:layout_marginEnd="10dp">
+            android:layout_marginEnd="10dp"
+            android:gravity="center">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/ProfileImage1"
@@ -46,10 +46,10 @@
             android:id="@+id/ProfileName0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hitesh Deshmukh"
-            android:textColor="@color/black"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
+            android:text="Hitesh Deshmukh"
+            android:textColor="@color/black"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -66,17 +66,17 @@
 
             <TextView
                 android:id="@+id/profileContactEmail1"
+                style="@style/TextColor"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                style="@style/TextColor"
                 android:text="Email Address: " />
 
 
             <TextView
                 android:id="@+id/profileContactNumber1"
+                style="@style/TextColor"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                style="@style/TextColor"
                 android:text="Watsapp No. " />
 
             <TextView
@@ -86,9 +86,9 @@
 
             <TextView
                 android:id="@+id/profileLocation1"
+                style="@style/TextColor"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                style="@style/TextColor"
                 android:text="Nagpur, Maharashtra" />
 
             <LinearLayout
@@ -122,6 +122,13 @@
 
         </LinearLayout>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profileTestResultRecycler1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/profile_test_result_recyler_sample" />
+
+
 
         <View
             android:layout_width="match_parent"
@@ -145,14 +152,13 @@
 
             <Button
                 android:id="@+id/logout"
+                style="@style/ButtonBackground1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/ButtonBackground1"
                 android:drawableLeft="@drawable/baseline_logout_24"
                 android:text="Logout" />
 
         </LinearLayout>
-
 
 
     </LinearLayout>
