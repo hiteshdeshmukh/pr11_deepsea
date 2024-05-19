@@ -16,7 +16,11 @@
 
 
 
-    <style name="Text">
+    <style name="AppBackground">
+        <item name="background">@color/black</item>
+    </style>
+
+    <style name="TextColor">
         <item name="android:textColor">#FFFFFF</item>
     </style>
 

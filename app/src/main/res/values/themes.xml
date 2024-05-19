@@ -15,6 +15,10 @@
     </style>
 
 
+    <style name="AppBackground">
+        <item name="background">@drawable/app_background1</item>
+        <item name="drawableTint">@drawable/app_background1</item>
+    </style>
 
     <!-- Text Background if light mode is on -->
     <style name="TextColor">
