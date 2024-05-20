@@ -110,11 +110,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.viewHolder>{
                             Toast.makeText(context,"Can be deleted", Toast.LENGTH_SHORT).show();
 
                             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
-//                            StorageReference storageReference = FirebaseStorage.getInstance().getReference()
-//                                    .child("posts").child(FirebaseAuth.getInstance().getUid())
-//                                    .child(postModel.getPostedAt());
-
-
 
                             if ( postModel.getPostImage() != null){
                                 //delete from storage first

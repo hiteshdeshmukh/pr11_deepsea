@@ -26,6 +26,17 @@
             app:riv_mutate_background="true"
             app:riv_oval="true" />
 
+
+
+        <TextView
+            android:id="@+id/editProfileImageRemove1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Remove Picture"
+            android:textColor="@color/blue"
+            android:layout_gravity="center" />
+
         <TextView
             android:id="@+id/editProfileImage"
             android:layout_width="wrap_content"
@@ -34,6 +45,7 @@
             android:text="Edit Picture"
             android:textColor="@color/blue"
             android:layout_gravity="center" />
+
 
         <TextView
             android:layout_width="wrap_content"

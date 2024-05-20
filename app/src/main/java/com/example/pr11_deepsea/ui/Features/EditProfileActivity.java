@@ -1,5 +1,6 @@
 package com.example.pr11_deepsea.ui.Features;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -81,6 +83,62 @@ public class EditProfileActivity extends AppCompatActivity {
 
                     }
                 });
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        binding.editProfileImageRemove1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                builder.setTitle("Confirm")
+                        .setMessage("Confirm remove the picture")
+                        .setCancelable(true)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //Toast.makeText(getApplicationContext(),"Deleting",Toast.LENGTH_SHORT).show();
+
+                                database.getReference().child("Users").child(auth.getUid())
+                                        .addListenerForSingleValueEvent(new ValueEventListener() {
+                                            @Override
+                                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                                                if (snapshot.exists()) {
+                                                    UserModel userModel = snapshot.getValue(UserModel.class);
+
+                                                    if (userModel.getProfilePhoto() != null){
+                                                        FirebaseStorage.getInstance().getReferenceFromUrl(userModel.getProfilePhoto())
+                                                                .delete();
+                                                        database.getReference().child("Users").child(auth.getUid())
+                                                                                .child("ProfilePhoto").removeValue();
+                                                        Toast.makeText(getApplicationContext(),"Profile Photo Deleted (Refresh)",Toast.LENGTH_SHORT).show();
+                                                        finish();
+                                                    }
+
+                                                }else {
+                                                    Toast.makeText(getApplicationContext(), "Image Not Available", Toast.LENGTH_SHORT).show();
+                                                }
+
+                                            }
+
+                                            @Override
+                                            public void onCancelled(@NonNull DatabaseError error) {
+
+                                            }
+                                        });
+
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .show();
+
+            }
+        });
 
 
         binding.editProfileConfirmChangeButton1.setOnClickListener(new View.OnClickListener() {
