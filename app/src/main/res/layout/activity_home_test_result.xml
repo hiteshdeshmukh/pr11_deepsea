@@ -182,9 +182,9 @@
                     android:layout_marginStart="20dp"
                     android:layout_weight="1"
                     android:gravity="clip_horizontal|center|clip_vertical"
-                    android:text="0.0"
+                    android:text="00.0"
                     android:textColor="#2196F3"
-                    android:textSize="34sp" />
+                    android:textSize="28sp" />
 
                 <TextView
                     android:id="@+id/textView13"
@@ -195,7 +195,7 @@
                     android:layout_weight="1"
                     android:gravity="clip_horizontal|center|clip_vertical"
                     android:text="/28"
-                    android:textSize="24sp" />
+                    android:textSize="22sp" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

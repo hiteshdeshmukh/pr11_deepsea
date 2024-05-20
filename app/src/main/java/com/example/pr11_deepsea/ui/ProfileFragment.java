@@ -1,6 +1,7 @@
 package com.example.pr11_deepsea.ui;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import com.example.pr11_deepsea.Model.UserModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.FragmentProfileBinding;
 import com.example.pr11_deepsea.ui.Features.EditProfileActivity;
+import com.example.pr11_deepsea.ui.Features.HomeTestResultActivity;
 import com.example.pr11_deepsea.ui.SignInPages.SignInActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -39,6 +41,18 @@ public class ProfileFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentProfileBinding.inflate(inflater, container,false);
         View view = binding.getRoot();
+
+
+        // background change as the UI configuration changes
+
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                binding.profileScrollView0.setBackgroundResource(R.drawable.app_background1);
+                break;
+        }
 
 
         auth = FirebaseAuth.getInstance();
@@ -119,6 +133,7 @@ public class ProfileFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
 
 
         binding.logout.setOnClickListener(new View.OnClickListener() {

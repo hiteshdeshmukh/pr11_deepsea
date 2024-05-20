@@ -1,5 +1,6 @@
 package com.example.pr11_deepsea.ui;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,18 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+
+        // background change as the UI configuration changes
+
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                binding.homeScrollView0.setBackgroundResource(R.drawable.app_background1);
+                break;
+        }
 
         ArrayList<TestHomeScreen1Model> testHomeScreen1ModelArrayList = new ArrayList<>();
         testHomeScreen1ModelArrayList.add(new TestHomeScreen1Model(R.drawable.test_anxiety, "Anxiety"));

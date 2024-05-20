@@ -1,6 +1,7 @@
 package com.example.pr11_deepsea.ui.SignInPages;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -47,9 +48,20 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        // background change as the UI configuration changes
+
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                binding.signUpLinearLayoutBackground1.setBackgroundResource(R.drawable.app_background1);
+                break;
+        }
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();

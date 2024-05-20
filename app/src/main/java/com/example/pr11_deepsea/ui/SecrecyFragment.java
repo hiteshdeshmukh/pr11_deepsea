@@ -1,6 +1,7 @@
 package com.example.pr11_deepsea.ui;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -47,6 +48,16 @@ public class SecrecyFragment extends Fragment {
         View view = binding.getRoot();
 
 
+        // background change as the UI configuration changes
+
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                binding.secrecyScrollView0.setBackgroundResource(R.drawable.app_background1);
+                break;
+        }
 
 
         binding.secrecyActionButton.setOnClickListener(new View.OnClickListener() {

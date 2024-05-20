@@ -1,5 +1,6 @@
 package com.example.pr11_deepsea.ui;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +23,19 @@ public class DashboardFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
-
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        // background change as the UI configuration changes
+
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                binding.dashboardScrollView0.setBackgroundResource(R.drawable.app_background1);
+                break;
+        }
 
         ArrayList<DashboardModel> dashboardModelArrayList = new ArrayList<>();
         dashboardModelArrayList.add(new DashboardModel(R.drawable.yoga,"Exercise",getString(R.string.extercise)));

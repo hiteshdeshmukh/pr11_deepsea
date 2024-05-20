@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center_horizontal"
-    android:background="@drawable/app_background1"
+    android:id="@+id/signInLinearLayoutBackground1"
     tools:context=".ui.SignInPages.SignInActivity">
 
     <TextView
