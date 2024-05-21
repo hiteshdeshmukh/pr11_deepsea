@@ -27,7 +27,8 @@
         </activity>
         <activity
             android:name=".ui.Features.EditProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:noHistory="true"/>
         <activity
             android:name=".ui.Features.TestQuestionsPage"
             android:exported="false"

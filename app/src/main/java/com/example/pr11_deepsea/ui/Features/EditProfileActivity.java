@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.pr11_deepsea.Model.UserModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.ActivityEditProfileBinding;
+import com.example.pr11_deepsea.ui.ProfileFragment;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -163,6 +165,12 @@ public class EditProfileActivity extends AppCompatActivity {
                         .child("location").setValue(userModel.getLocation());
 
                 Toast.makeText(EditProfileActivity.this, "Data Updated Successfully", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(EditProfileActivity.this, ProfileFragment.class);
+
+                startActivity(intent);
+
+
             }
         });
 
