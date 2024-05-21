@@ -1,6 +1,7 @@
 package com.example.pr11_deepsea.ui.SignInPages;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -33,25 +34,39 @@ public class SplashScreenActivity extends AppCompatActivity {
         binding = ActivitySplashScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+
+        // background change as the UI configuration changes
+
+        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.app_background1);
+                break;
+            case Configuration.UI_MODE_NIGHT_NO:
+                binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.app_background1);
+                break;
+        }
+
+
+
         auth = FirebaseAuth.getInstance();
         currentUser = auth.getCurrentUser();
 
 
-        binding.splashScreenSignInButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SplashScreenActivity.this, SignInActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        binding.splashScreenSignUpButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SplashScreenActivity.this, SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
+//        binding.splashScreenSignInButton1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(SplashScreenActivity.this, SignInActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//
+//        binding.splashScreenSignUpButton1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(SplashScreenActivity.this, SignUpActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
     }
 
@@ -59,7 +74,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-        if (currentUser != null){
+        //if (currentUser != null){
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -68,6 +83,6 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }
             },800);
 
-        }
+        //}
     }
 }

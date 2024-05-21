@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="( Patient health Questionnaire 7( PHQ - 7) )"
-                android:textColor="@color/black"
+                style="@style/TextColor"
                 android:textSize="16sp" />
 
             <TextView
@@ -44,9 +44,10 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/home_result_screen_circular_border"
                 android:backgroundTint="#E55B51"
-                android:gravity="center"
-                android:padding="5dp"
-                android:paddingStart="5dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
                 android:text="Depression"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
@@ -73,6 +74,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
+                android:layout_weight="1"
                 android:background="@drawable/home_result_screen_circular_border"
                 android:orientation="horizontal">
 
@@ -167,35 +169,39 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="15dp"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical|center"
                 android:background="@drawable/home_result_circular_score_color"
                 android:elevation="20dp"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/homeTestResultNumber1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="20dp"
-                    android:layout_weight="1"
-                    android:gravity="clip_horizontal|center|clip_vertical"
-                    android:text="00.0"
-                    android:textColor="#2196F3"
-                    android:textSize="28sp" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginEnd="20dp"
-                    android:layout_weight="1"
-                    android:gravity="clip_horizontal|center|clip_vertical"
-                    android:text="/28"
-                    android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/homeTestResultNumber1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00.0"
+                        android:textColor="#2196F3"
+                        android:textSize="28sp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/28"
+                        android:textColor="@color/gray"
+                        android:textSize="22sp" />
+
+                </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
