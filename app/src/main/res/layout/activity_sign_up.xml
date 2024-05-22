@@ -11,10 +11,10 @@
 
     <TextView
         android:id="@+id/logo1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_marginTop="50dp"
         android:layout_height="80dp"
-        android:text=" DeepSea "
+        android:text="@string/app_name"
         android:textColor="@color/blue"
         android:textSize="30dp"
         android:textStyle="bold"

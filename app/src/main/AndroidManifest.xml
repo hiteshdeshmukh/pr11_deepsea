@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pr11_deepsea"
         tools:targetApi="31">
+        <activity
+            android:name=".ui.Features.DashboardSchedulerActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.Features.HomeTestResultActivity"
             android:exported="false" />
@@ -28,19 +33,19 @@
         <activity
             android:name=".ui.Features.EditProfileActivity"
             android:exported="false"
-            android:noHistory="true"/>
+            android:noHistory="true" />
         <activity
             android:name=".ui.Features.TestQuestionsPage"
             android:exported="false"
-            android:noHistory="true"/>
+            android:noHistory="true" />
         <activity
             android:name=".ui.SignInPages.SignUpActivity"
             android:exported="false"
-            android:noHistory="true"/>
+            android:noHistory="true" />
         <activity
             android:name=".ui.SignInPages.SignInActivity"
             android:exported="true"
-            android:noHistory="true"/>
+            android:noHistory="true" />
         <activity
             android:name=".ui.Features.AddPostActivity"
             android:exported="false" />
@@ -48,6 +53,17 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name" />
+
+        <receiver android:name=".ui.Features.Receiver.AlarmReceiver"/>
+
+
     </application>
+
+
+
+
+
+
+
 
 </manifest>

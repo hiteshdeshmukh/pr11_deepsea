@@ -74,7 +74,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onStart(){
         super.onStart();
-        //if (currentUser != null){
+        if (currentUser != null){
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -83,6 +83,9 @@ public class SplashScreenActivity extends AppCompatActivity {
                 }
             },800);
 
-        //}
+        }else{
+            Intent intent = new Intent(SplashScreenActivity.this, SignInActivity.class);
+            startActivity(intent);
+        }
     }
 }
