@@ -9,10 +9,10 @@
 
 
     <TextView
-        android:id="@+id/ScedulerSelectedTimeText"
+        android:id="@+id/scedulerSelectedTimeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="250dp"
         android:text="08 : 45 PM"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -29,26 +29,27 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/schedulerSetAlarmButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Set Alarm"
-            android:layout_weight="1"
-            android:layout_margin="20dp"
-            android:layout_gravity="center"/>
+            android:text="Set"
+            android:layout_weight="0.5"
+            android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/schedulerCancelAlarmButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancel Alarm"
-            android:layout_margin="20dp"
-            android:layout_weight="1"
-            android:layout_gravity="center"/>
+            android:text="Cancel"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5" />
 
     </LinearLayout>
 
