@@ -2,6 +2,7 @@ package com.example.pr11_deepsea.ui.SignInPages;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -37,14 +38,18 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         // background change as the UI configuration changes
 
-        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
-            case Configuration.UI_MODE_NIGHT_YES:
-                binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.app_background1);
-                break;
-            case Configuration.UI_MODE_NIGHT_NO:
-                binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.app_background1);
-                break;
-        }
+//        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+//            case Configuration.UI_MODE_NIGHT_YES:
+//                //binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.app_background1);
+//                //binding.splashScreenLinearLayout1.setBackgroundColor(Color.WHITE);
+//                binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.logo11111);
+//                break;
+//            case Configuration.UI_MODE_NIGHT_NO:
+//                //binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.app_background1);
+//                binding.splashScreenLinearLayout1.setBackgroundResource(R.drawable.logo11111);
+//                //binding.splashScreenLinearLayout1.setBackgroundColor(Color.WHITE);
+//                break;
+//        }
 
 
 

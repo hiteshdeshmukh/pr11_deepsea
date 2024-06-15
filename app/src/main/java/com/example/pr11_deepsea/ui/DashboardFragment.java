@@ -1,5 +1,6 @@
 package com.example.pr11_deepsea.ui;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.example.pr11_deepsea.Adapter.DashboardAdapter;
 import com.example.pr11_deepsea.Model.DashboardModel;
 import com.example.pr11_deepsea.R;
 import com.example.pr11_deepsea.databinding.FragmentDashboardBinding;
+import com.example.pr11_deepsea.ui.Features.DashboardSchedulerActivity;
 
 import java.util.ArrayList;
 
@@ -26,16 +28,16 @@ public class DashboardFragment extends Fragment {
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // background change as the UI configuration changes
-
-        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
-            case Configuration.UI_MODE_NIGHT_YES:
-
-                break;
-            case Configuration.UI_MODE_NIGHT_NO:
-                binding.dashboardScrollView0.setBackgroundResource(R.drawable.app_background1);
-                break;
-        }
+//        // background change as the UI configuration changes
+//
+//        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+//            case Configuration.UI_MODE_NIGHT_YES:
+//
+//                break;
+//            case Configuration.UI_MODE_NIGHT_NO:
+//                binding.dashboardScrollView0.setBackgroundResource(R.drawable.app_background1);
+//                break;
+//        }
 
         ArrayList<DashboardModel> dashboardModelArrayList = new ArrayList<>();
         dashboardModelArrayList.add(new DashboardModel(R.drawable.yoga,"Exercise",getString(R.string.extercise)));
@@ -53,6 +55,13 @@ public class DashboardFragment extends Fragment {
 
 
 
+        binding.dashboardFloatingActionButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), DashboardSchedulerActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
 
         return root;
     }

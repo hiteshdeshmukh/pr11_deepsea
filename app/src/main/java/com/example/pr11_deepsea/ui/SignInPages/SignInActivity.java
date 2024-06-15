@@ -53,14 +53,14 @@ public class SignInActivity extends AppCompatActivity {
 
         // background change as the UI configuration changes
 
-        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
-            case Configuration.UI_MODE_NIGHT_YES:
-
-                break;
-            case Configuration.UI_MODE_NIGHT_NO:
-                binding.signInLinearLayoutBackground1.setBackgroundResource(R.drawable.app_background1);
-                break;
-        }
+//        switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+//            case Configuration.UI_MODE_NIGHT_YES:
+//
+//                break;
+//            case Configuration.UI_MODE_NIGHT_NO:
+//                binding.signInLinearLayoutBackground1.setBackgroundResource(R.drawable.app_background1);
+//                break;
+//        }
 
 
 
